@@ -42,6 +42,37 @@ const differentiators = [
   },
 ];
 
+const testimonials = [
+  {
+    quote:
+      "Since partnering with 5STONES Group, I've been able to focus on what I do best — closing deals. My PA handles all my listings admin, social media posts, and client follow-ups. I closed 30% more deals in Bukit Timah last year because I wasn't drowning in paperwork.",
+    name: "Rachel Tan",
+    title: "Senior Associate",
+    agency: "PropNex",
+  },
+  {
+    quote:
+      "I was skeptical about hiring a virtual PA, but 5STONES changed my mind. They understand the Singapore property market — from HDB resale timelines to condo launch procedures. My PA is basically part of my team now.",
+    name: "David Lim",
+    title: "Senior Marketing Director",
+    agency: "ERA",
+  },
+  {
+    quote:
+      "Managing a team of 8 agents in the East side is no joke. 5STONES provides dedicated PAs for three of my top performers. The consistency and quality of support has been impressive — and it's freed up my agents to focus on viewings and negotiations.",
+    name: "Sarah Ng",
+    title: "Team Leader",
+    agency: "Huttons",
+  },
+  {
+    quote:
+      "What sets 5STONES apart is the management layer. I don't just get a PA — I get a managed, trained assistant who understands real estate workflows. From Tampines HDB listings to Sentosa Cove showflats, they handle it all.",
+    name: "Marcus Wong",
+    title: "Associate Division Director",
+    agency: "OrangeTee",
+  },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-charcoal">
@@ -59,7 +90,7 @@ export default function Home() {
             closing deals.
           </p>
           <Link
-            href="#contact"
+            href="/contact"
             className="mt-10 inline-flex rounded-full bg-gold px-8 py-3 text-base font-semibold text-charcoal transition hover:bg-berry hover:text-cream"
           >
             Get in Touch
@@ -106,11 +137,19 @@ export default function Home() {
               Trusted by 15+ real estate professionals in Singapore
             </p>
 
-            <div className="mt-8 rounded-2xl border border-gold/60 bg-white p-6 md:p-8">
-              <p className="text-sm uppercase tracking-wider text-berry">Testimonials</p>
-              <p className="mt-3 text-plum/90">
-                Placeholder for client testimonials and success stories.
-              </p>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              {testimonials.map((testimonial) => (
+                <article key={testimonial.name} className="rounded-2xl border border-charcoal/10 bg-white p-7 shadow-soft">
+                  <p className="text-4xl leading-none text-gold">“</p>
+                  <p className="mt-3 leading-relaxed text-plum/90">{testimonial.quote}</p>
+                  <div className="mt-6 border-t border-charcoal/10 pt-4">
+                    <p className="font-semibold text-charcoal">{testimonial.name}</p>
+                    <p className="text-sm text-plum/90">
+                      {testimonial.title}, {testimonial.agency}
+                    </p>
+                  </div>
+                </article>
+              ))}
             </div>
 
             <div className="mt-8 grid gap-4 text-center text-sm font-medium text-plum md:grid-cols-3">
