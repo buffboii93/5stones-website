@@ -99,12 +99,12 @@ export default function Home() {
 
         <div className="h-20 bg-gradient-to-b from-white to-cream/70" />
 
-        <motion.section id="services" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.6 }} className="bg-white py-16 md:py-24">
+        <motion.section id="services" initial={{ opacity: 1, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.6 }} className="bg-white py-16 md:py-24">
           <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
             <h2 className="font-serif text-4xl font-semibold md:text-5xl">Services Overview</h2>
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.4 }} className="mt-12 grid gap-6 md:grid-cols-2">
+            <motion.div initial={{ opacity: 1, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.4 }} className="mt-12 grid gap-6 md:grid-cols-2">
               {services.map((service, idx) => (
-                <motion.article key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, delay: idx * 0.1 }} whileHover={{ y: -4, scale: 1.01 }} className="overflow-hidden rounded-2xl border border-charcoal/10 bg-white shadow-soft transition hover:shadow-xl">
+                <motion.article key={service.title} initial={{ opacity: 1, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, delay: idx * 0.1 }} whileHover={{ y: -4, scale: 1.01 }} className="overflow-hidden rounded-2xl border border-charcoal/10 bg-white shadow-soft transition hover:shadow-xl">
                   <div className="relative h-40 w-full"><Image src={service.image} alt={service.alt} fill className="object-cover" /></div>
                   <div className="p-7"><h3 className="text-xl font-semibold text-charcoal">{service.title}</h3><p className="mt-3 leading-relaxed text-plum/90">{service.description}</p></div>
                 </motion.article>
@@ -115,13 +115,13 @@ export default function Home() {
 
         <div className="h-20 bg-gradient-to-b from-white to-cream/90" />
 
-        <motion.section id="why-5stones" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="bg-cream py-16 md:py-24">
+        <motion.section id="why-5stones" initial={{ opacity: 1, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="bg-cream py-16 md:py-24">
           <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 md:grid-cols-[1.2fr_1fr] md:px-8">
             <div>
               <h2 className="font-serif text-4xl font-semibold md:text-5xl">Why 5STONES Group</h2>
               <div className="mt-12 grid gap-6 md:grid-cols-1">
                 {differentiators.map((item, idx) => (
-                  <motion.article key={item.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.55, delay: idx * 0.08 }} className="rounded-2xl border border-charcoal/10 bg-white p-7 shadow-soft">
+                  <motion.article key={item.title} initial={{ opacity: 1, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.55, delay: idx * 0.08 }} className="rounded-2xl border border-charcoal/10 bg-white p-7 shadow-soft">
                     <div className="h-2 w-12 rounded-full bg-berry" />
                     <h3 className="mt-5 text-xl font-semibold">{item.title}</h3>
                     <p className="mt-3 leading-relaxed text-plum/90">{item.description}</p>
@@ -136,13 +136,13 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <motion.section initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="bg-white py-16 md:py-24">
+        <motion.section initial={{ opacity: 1, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="bg-white py-16 md:py-24">
           <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
             <h2 className="font-serif text-4xl font-semibold md:text-5xl">Trusted by agents</h2>
             <p className="mt-5 text-lg text-charcoal/80">Trusted by 15+ real estate professionals in Singapore</p>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               {testimonials.map((testimonial, idx) => (
-                <motion.article key={testimonial.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.5, delay: idx * 0.1 }} className="rounded-2xl border border-charcoal/10 bg-white p-7 shadow-soft">
+                <motion.article key={testimonial.name} initial={{ opacity: 1, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.5, delay: idx * 0.1 }} className="rounded-2xl border border-charcoal/10 bg-white p-7 shadow-soft">
                   <p className="text-5xl leading-none text-gold/90">“</p>
                   <p className="mt-3 leading-relaxed text-plum/90">{testimonial.quote}</p>
                   <div className="mt-6 flex items-center gap-3 border-t border-charcoal/10 pt-4">
