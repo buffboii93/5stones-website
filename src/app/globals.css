@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold: #bfb48f;
+  --color-plum: #564e58;
+  --color-berry: #904e55;
+  --color-cream: #f2efe9;
+  --color-charcoal: #252627;
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-cormorant);
+}
+
+html,
+body {
+  background: #f2efe9;
+  color: #252627;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
