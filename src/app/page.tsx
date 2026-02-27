@@ -34,7 +34,7 @@ const differentiators = [
   },
   {
     title: "Managed team",
-    description: "We recruit, train, and quality-control so you don&apos;t have to.",
+    description: "We recruit, train, and quality-control so you don't have to.",
   },
   {
     title: "Real estate expertise",
@@ -44,23 +44,23 @@ const differentiators = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-cream text-charcoal">
+    <div className="min-h-screen bg-white text-charcoal">
       <Navbar />
 
       <main>
-        <section className="mx-auto w-full max-w-6xl px-5 py-20 md:px-8 md:py-28">
-          <p className="mb-6 text-sm uppercase tracking-[0.2em] text-plum/80">5stones Group</p>
+        <section className="mx-auto w-full max-w-6xl px-5 py-24 md:px-8 md:py-32">
+          <p className="mb-6 text-sm uppercase tracking-[0.2em] text-plum/85">5STONES Group</p>
           <h1 className="max-w-4xl font-serif text-5xl leading-tight font-semibold text-charcoal md:text-7xl">
             Focus on closing. We&apos;ll handle the rest.
           </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-charcoal/80 md:text-xl">
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-charcoal/85 md:text-xl">
             Dedicated personal assistants for Singapore&apos;s real estate professionals.
             Admin, marketing, lead generation — we handle it all so you can focus on
             closing deals.
           </p>
           <Link
             href="#contact"
-            className="mt-10 inline-flex rounded-full bg-gold px-7 py-3 text-base font-semibold text-charcoal transition hover:bg-berry hover:text-cream"
+            className="mt-10 inline-flex rounded-full bg-gold px-8 py-3 text-base font-semibold text-charcoal transition hover:bg-berry hover:text-cream"
           >
             Get in Touch
           </Link>
@@ -71,25 +71,28 @@ export default function Home() {
             <h2 className="font-serif text-4xl font-semibold md:text-5xl">Services Overview</h2>
             <div className="mt-12 grid gap-6 md:grid-cols-2">
               {services.map((service) => (
-                <article key={service.title} className="rounded-2xl bg-cream p-7 shadow-soft">
+                <article
+                  key={service.title}
+                  className="rounded-2xl border border-charcoal/10 bg-white p-7 shadow-soft transition hover:-translate-y-0.5 hover:shadow-md"
+                >
                   <p className="text-2xl">{service.icon}</p>
                   <h3 className="mt-4 text-xl font-semibold text-charcoal">{service.title}</h3>
-                  <p className="mt-3 leading-relaxed text-charcoal/75">{service.description}</p>
+                  <p className="mt-3 leading-relaxed text-plum/90">{service.description}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="why-5stones" className="py-20 md:py-24">
+        <section id="why-5stones" className="bg-cream py-20 md:py-24">
           <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
-            <h2 className="font-serif text-4xl font-semibold md:text-5xl">Why 5stones</h2>
+            <h2 className="font-serif text-4xl font-semibold md:text-5xl">Why 5STONES Group</h2>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {differentiators.map((item) => (
-                <article key={item.title} className="rounded-2xl border border-charcoal/10 bg-white p-7">
+                <article key={item.title} className="rounded-2xl border border-charcoal/10 bg-white p-7 shadow-soft">
                   <div className="h-2 w-12 rounded-full bg-berry" />
                   <h3 className="mt-5 text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 leading-relaxed text-charcoal/75">{item.description}</p>
+                  <p className="mt-3 leading-relaxed text-plum/90">{item.description}</p>
                 </article>
               ))}
             </div>
@@ -103,17 +106,17 @@ export default function Home() {
               Trusted by 15+ real estate professionals in Singapore
             </p>
 
-            <div className="mt-8 rounded-2xl border border-gold/40 bg-cream p-6 md:p-8">
-              <p className="text-sm uppercase tracking-wider text-plum">Testimonials</p>
-              <p className="mt-3 text-charcoal/70">
+            <div className="mt-8 rounded-2xl border border-gold/60 bg-white p-6 md:p-8">
+              <p className="text-sm uppercase tracking-wider text-berry">Testimonials</p>
+              <p className="mt-3 text-plum/90">
                 Placeholder for client testimonials and success stories.
               </p>
             </div>
 
             <div className="mt-8 grid gap-4 text-center text-sm font-medium text-plum md:grid-cols-3">
-              <div className="rounded-xl border border-charcoal/10 bg-cream px-4 py-4">15 PAs</div>
-              <div className="rounded-xl border border-charcoal/10 bg-cream px-4 py-4">15 Agents</div>
-              <div className="rounded-xl border border-charcoal/10 bg-cream px-4 py-4">Founded 2023</div>
+              <div className="rounded-xl border border-charcoal/10 bg-white px-4 py-4">15 PAs</div>
+              <div className="rounded-xl border border-charcoal/10 bg-white px-4 py-4">15 Agents</div>
+              <div className="rounded-xl border border-charcoal/10 bg-white px-4 py-4">Founded 2023</div>
             </div>
           </div>
         </section>

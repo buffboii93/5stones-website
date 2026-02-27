@@ -7,12 +7,12 @@
   --color-cream: #f2efe9;
   --color-charcoal: #252627;
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-cormorant);
+  --font-serif: var(--font-plus-jakarta);
 }
 
 html,
 body {
-  background: #f2efe9;
+  background: #ffffff;
   color: #252627;
 }
 

@@ -10,11 +10,18 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-charcoal/10 bg-cream/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-charcoal/10 bg-white/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="#" className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="5stones logo" width={34} height={34} priority />
-          <span className="font-serif text-2xl font-semibold text-charcoal">5stones</span>
+        <Link href="#" className="flex items-center gap-3">
+          <Image
+            src="/logo.svg"
+            alt="5STONES Group logo"
+            width={52}
+            height={52}
+            className="h-11 w-auto"
+            priority
+          />
+          <span className="font-serif text-2xl font-semibold text-charcoal">5STONES Group</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -27,7 +34,7 @@ export default function Navbar() {
 
         <Link
           href="#contact"
-          className="rounded-full bg-gold px-4 py-2 text-sm font-semibold text-charcoal transition hover:bg-berry hover:text-cream"
+          className="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-charcoal transition hover:bg-berry hover:text-cream"
         >
           Get in Touch
         </Link>
