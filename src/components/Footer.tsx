@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="md:col-span-2">
           <h3 className="font-serif text-3xl font-semibold">5STONES Group</h3>
           <p className="mt-4 max-w-md text-sm text-plum/90">
-            Dedicated personal assistants for Singapore&apos;s real estate professionals.
-            We help you stay organised, visible, and focused on closing deals.
+            Dedicated virtual assistants for Singapore businesses across industries.
+            We help you stay organised, visible, and focused on growth.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function Footer() {
               <a href="mailto:hello@5stonesgroup.com" className="hover:text-berry">hello@5stonesgroup.com</a>
             </li>
             <li>
-              <a href="tel:+6590000000" className="hover:text-berry">+65 9000 0000</a>
+              <a href="https://wa.me/6580643906" target="_blank" rel="noreferrer" className="hover:text-berry">+65 8064 3906</a>
             </li>
             <li>Singapore</li>
           </ul>
@@ -43,7 +43,7 @@ export default function Footer() {
       <div className="border-t border-charcoal/10">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 text-xs text-plum/90 md:px-8">
           <p>© {new Date().getFullYear()} 5STONES Group. All rights reserved.</p>
-          <p>Built for real estate professionals in Singapore.</p>
+          <p>Built for modern businesses in Singapore.</p>
         </div>
       </div>
     </footer>

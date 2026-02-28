@@ -53,7 +53,7 @@ export default function Navbar() {
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
           <Link
             href="/contact"
-            className="rounded-xl bg-gold px-5 py-2 text-sm font-semibold text-charcoal shadow-sm transition hover:bg-berry hover:text-cream hover:shadow-lg"
+            className="inline-flex rounded-xl bg-gold px-8 py-3 text-base font-semibold text-charcoal shadow-sm transition hover:bg-berry hover:text-cream hover:shadow-lg"
           >
             Get in Touch
           </Link>

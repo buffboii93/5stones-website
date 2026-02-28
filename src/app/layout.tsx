@@ -14,9 +14,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "5STONES Group | Dedicated PA Support for Real Estate Agents",
+  title: "5STONES Group | Dedicated PA Support for Growing Businesses",
   description:
-    "Dedicated personal assistants for Singapore real estate professionals.",
+    "Dedicated virtual assistants for Singapore businesses across industries.",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
