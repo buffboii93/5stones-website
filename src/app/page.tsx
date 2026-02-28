@@ -2,68 +2,54 @@
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { motion, useInView, useScroll, useTransform, animate } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 const services = [
   {
-    title: "Administrative Support",
-    description: "From paperwork to scheduling, we keep your business running smoothly.",
+    title: "Marketing & Brand Management",
+    description: "Build a recognizable personal brand. We manage your social media presence, create targeted campaigns, and position you as the go-to agent in your area.",
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
     alt: "Organized office desk with documents and laptop",
   },
   {
-    title: "Marketing & Lead Gen",
-    description: "Social media management, property listings, and targeted outreach.",
+    title: "Paperwork & Admin",
+    description: "Never get buried in paperwork again. From contracts to compliance documents, we handle the administrative load so nothing falls through the cracks.",
     image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
     alt: "Person analyzing social media performance on smartphone",
   },
   {
-    title: "Deal Support",
-    description: "Transaction coordination from offer to close.",
+    title: "Calendar & Appointment Management",
+    description: "Stay on top of every viewing, meeting, and deadline. We coordinate your schedule, send reminders, and ensure your calendar runs like clockwork.",
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80",
     alt: "Two professionals shaking hands over a real estate agreement",
   },
   {
-    title: "Digital Presence",
-    description: "Content creation, social media, and online visibility.",
+    title: "Content Creation",
+    description: "Stand out with professional content. From property listings to social media posts and marketing collateral — we create content that gets you noticed.",
     image: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1200&q=80",
     alt: "Laptop with digital dashboard and content planning notes",
   },
 ];
 
 const differentiators = [
-  { title: "Dedicated 1-to-1 support", description: "Each real estate agent gets a dedicated PA focused on your goals." },
-  { title: "Managed team", description: "We recruit, train, and quality-control so you don't have to." },
-  { title: "Real estate expertise", description: "Our team understands the Singapore property market and workflow." },
+  { title: "Dedicated 1-to-1 Support", description: "Each client gets their own dedicated PA focused on your goals." },
+  { title: "Managed & Trained Team", description: "Our PAs are professionally trained and managed. You get a reliable, quality-controlled support system — not a freelancer you have to manage yourself." },
+  { title: "More Than Just a PA", description: "Your PA is backed by an entire support team — in-house designers, customer success managers, and internal resources — all working behind the scenes to deliver the best possible support." },
 ];
 
 const testimonials = [
-  { quote: "Since partnering with 5STONES Group, I've been able to focus on what I do best — closing deals. My PA handles all my listings admin, social media posts, and client follow-ups.", name: "Rachel Tan", title: "Senior Associate", agency: "PropNex" },
-  { quote: "I was skeptical about hiring a virtual PA, but 5STONES changed my mind. They understand the Singapore property market and my PA is basically part of my team now.", name: "David Lim", title: "Senior Marketing Director", agency: "ERA" },
-  { quote: "Managing a team of agents is no joke. 5STONES provides dedicated PAs for my top performers. The consistency and quality have been impressive.", name: "Sarah Ng", title: "Team Leader", agency: "Huttons" },
-  { quote: "What sets 5STONES apart is the management layer. I don't just get a PA — I get a managed, trained assistant who understands real estate workflows.", name: "Marcus Wong", title: "Associate Division Director", agency: "OrangeTee" },
+  { quote: "Since partnering with 5STONES Group, I've been able to focus on what I do best — closing deals. My PA handles all my listings admin, social media posts, and client follow-ups.", name: "R.T.", title: "Senior Associate", agency: "PropNex" },
+  { quote: "I was skeptical about hiring a virtual PA, but 5STONES changed my mind. They understand the Singapore property market and my PA is basically part of my team now.", name: "D.L.", title: "Senior Marketing Director", agency: "ERA" },
+  { quote: "Managing a team of agents is no joke. 5STONES provides dedicated PAs for my top performers. The consistency and quality have been impressive.", name: "S.N.", title: "Team Leader", agency: "Huttons" },
+  { quote: "What sets 5STONES apart is the management layer. I don't just get a PA — I get a managed, trained assistant who understands real estate workflows.", name: "M.W.", title: "Associate Division Director", agency: "OrangeTee" },
 ];
 
-function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.5 });
-  const [num, setNum] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    const controls = animate(0, value, { duration: 1.2, onUpdate: (v) => setNum(Math.round(v)) });
-    return () => controls.stop();
-  }, [inView, value]);
-
-  return <span ref={ref}>{num}{suffix}</span>;
-}
-
 function InitialsAvatar({ name }: { name: string }) {
-  const initials = name.split(" ").map((v) => v[0]).join("").slice(0, 2).toUpperCase();
-  return <div className="flex h-10 w-10 items-center justify-center rounded-full bg-berry/15 text-sm font-semibold text-berry">{initials}</div>;
+  const letters = name.replace(/[^A-Za-z]/g, "").slice(0, 2).toUpperCase();
+  return <div className="flex h-10 w-10 items-center justify-center rounded-full bg-berry/15 text-sm font-semibold text-berry">{letters}</div>;
 }
 
 export default function Home() {
@@ -84,11 +70,10 @@ export default function Home() {
           className="relative mx-auto grid w-full max-w-6xl gap-10 overflow-hidden px-5 py-16 md:grid-cols-2 md:px-8 md:py-24"
         >
           <div className="relative z-10 flex flex-col justify-center">
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-plum/85">5STONES Group</p>
             <h1 className="max-w-2xl font-serif text-5xl leading-tight font-semibold text-charcoal md:text-7xl">Focus on closing. We&apos;ll handle the rest.</h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-charcoal/85 md:text-xl">Dedicated personal assistants for Singapore&apos;s real estate professionals. Admin, marketing, lead generation — we handle it all so you can focus on closing deals.</p>
             <motion.div whileHover={{ scale: 1.02, y: -1 }} whileTap={{ scale: 0.98 }} className="mt-10">
-              <Link href="/contact" className="inline-flex rounded-full bg-gold px-8 py-3 text-base font-semibold text-charcoal shadow-sm transition hover:shadow-lg hover:bg-berry hover:text-cream">Get in Touch</Link>
+              <Link href="/contact" className="inline-flex rounded-xl bg-gold px-8 py-3 text-base font-semibold text-charcoal shadow-sm transition hover:shadow-lg hover:bg-berry hover:text-cream">Get in Touch</Link>
             </motion.div>
           </div>
           <motion.div style={{ y: heroImageY }} className="relative h-[420px] overflow-hidden rounded-3xl shadow-2xl md:h-[520px]">
@@ -151,11 +136,6 @@ export default function Home() {
                   </div>
                 </motion.article>
               ))}
-            </div>
-            <div className="mt-10 grid gap-4 text-center text-sm font-medium text-plum md:grid-cols-3">
-              <div className="rounded-xl border border-charcoal/10 bg-white px-4 py-4"><p className="text-2xl font-semibold text-charcoal"><CountUp value={15} suffix="+" /></p><p className="mt-1">PAs</p></div>
-              <div className="rounded-xl border border-charcoal/10 bg-white px-4 py-4"><p className="text-2xl font-semibold text-charcoal"><CountUp value={15} suffix="+" /></p><p className="mt-1">Agents</p></div>
-              <div className="rounded-xl border border-charcoal/10 bg-white px-4 py-4"><p className="text-2xl font-semibold text-charcoal"><CountUp value={2023} /></p><p className="mt-1">Founded</p></div>
             </div>
           </div>
         </motion.section>

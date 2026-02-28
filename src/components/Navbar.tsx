@@ -31,16 +31,15 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center">
           <Image
             src="/logo.svg"
             alt="5STONES Group logo"
-            width={52}
-            height={52}
-            className="h-11 w-auto"
+            width={68}
+            height={68}
+            className="h-14 w-auto"
             priority
           />
-          <span className="font-serif text-2xl font-semibold text-charcoal">5STONES Group</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -54,7 +53,7 @@ export default function Navbar() {
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
           <Link
             href="/contact"
-            className="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-charcoal shadow-sm transition hover:bg-berry hover:text-cream hover:shadow-lg"
+            className="rounded-xl bg-gold px-5 py-2 text-sm font-semibold text-charcoal shadow-sm transition hover:bg-berry hover:text-cream hover:shadow-lg"
           >
             Get in Touch
           </Link>
