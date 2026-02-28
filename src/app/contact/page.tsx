@@ -25,6 +25,8 @@ export default function ContactPage() {
       message: String(formData.get("message") || "").trim(),
     };
 
+    const form = event.currentTarget;
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -40,7 +42,7 @@ export default function ContactPage() {
 
       setSubmitState("success");
       setFeedback("Thanks — your message has been sent. We’ll get back to you soon.");
-      event.currentTarget.reset();
+      form.reset();
     } catch (error) {
       setSubmitState("error");
       setFeedback(error instanceof Error ? error.message : "Something went wrong. Please try again.");
