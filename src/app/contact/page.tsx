@@ -64,7 +64,7 @@ export default function ContactPage() {
           <p className="text-sm uppercase tracking-[0.2em] text-plum/85">Contact</p>
           <h1 className="mt-4 font-serif text-4xl font-semibold md:text-6xl">Let&apos;s Talk</h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-charcoal/85">
-            Tell us where you need support, and we&apos;ll match you with the right dedicated PA for your workflow.
+            Tell us where you need support, and we&apos;ll match you with the right dedicated VA for your workflow.
           </p>
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">

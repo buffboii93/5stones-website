@@ -35,7 +35,7 @@ const services = [
 ];
 
 const differentiators = [
-  { title: "Dedicated 1-to-1 Support", description: "Every client gets a dedicated PA who learns your workflow, your preferences, and your business. No sharing, no rotation — just consistent support from someone who knows how you work." },
+  { title: "Dedicated 1-to-1 Support", description: "Every client gets a dedicated VA who learns your workflow, your preferences, and your business. No sharing, no rotation — just consistent support from someone who knows how you work." },
   { title: "Managed & Trained Team", description: "Our PAs are professionally recruited, trained, and managed. You get reliable, quality-controlled support — without the hassle of hiring, training, or managing someone yourself." },
   { title: "More Than Just a PA", description: "Your PA is backed by an entire support ecosystem — in-house designers, customer success managers, and shared resources. When your PA needs help, they have a team behind them to deliver." },
 ];
@@ -43,7 +43,7 @@ const differentiators = [
 const testimonials = [
   { quote: "Since partnering with 5STONES Group, I can finally stay focused on growth. My PA handles admin, scheduling, social media coordination, and follow-ups without dropping the ball.", name: "R.T.", title: "Business Owner", agency: "Professional Services" },
   { quote: "I was skeptical about outsourcing support at first, but 5STONES changed my mind. My PA feels like part of the team and keeps operations running smoothly every day.", name: "D.L.", title: "Marketing Lead", agency: "E-commerce" },
-  { quote: "Managing a fast-moving team is intense. 5STONES gives our key people dedicated PAs, and the quality and consistency have been excellent.", name: "S.N.", title: "Operations Manager", agency: "Education" },
+  { quote: "Managing a fast-moving team is intense. 5STONES gives our key people dedicated VAs, and the quality and consistency have been excellent.", name: "S.N.", title: "Operations Manager", agency: "Education" },
   { quote: "What sets 5STONES apart is the managed model. You don't just get one assistant — you get a trained PA backed by a support team that helps deliver reliably.", name: "M.W.", title: "General Manager", agency: "Consulting" },
 ];
 
@@ -70,7 +70,7 @@ export default function Home() {
           className="relative mx-auto grid w-full max-w-6xl gap-10 overflow-hidden px-5 py-16 md:grid-cols-2 md:px-8 md:py-24"
         >
           <div className="relative z-10 flex flex-col justify-center">
-            <h1 className="max-w-2xl font-serif text-5xl leading-tight font-semibold text-charcoal md:text-7xl">Focus on growth. We&apos;ll handle the rest.</h1>
+            <h1 className="max-w-2xl font-serif text-5xl leading-tight font-semibold text-charcoal md:text-7xl">Focus on closing. We&apos;ll handle the rest.</h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-charcoal/85 md:text-xl">Dedicated virtual assistants for Singapore&apos;s busiest professionals. Admin, marketing, scheduling, content — we handle it all so you can focus on what you do best.</p>
             <motion.div whileHover={{ scale: 1.02, y: -1 }} whileTap={{ scale: 0.98 }} className="mt-10">
               <Link href="/contact" className="inline-flex rounded-xl bg-gold px-8 py-3 text-base font-semibold text-charcoal shadow-sm transition hover:shadow-lg hover:bg-berry hover:text-cream">Get in Touch</Link>
