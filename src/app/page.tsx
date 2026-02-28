@@ -10,34 +10,34 @@ import { useRef } from "react";
 const services = [
   {
     title: "Marketing & Brand Management",
-    description: "Build a recognizable personal brand. We manage your social media presence, create targeted campaigns, and position you as the go-to agent in your area.",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
-    alt: "Organized office desk with documents and laptop",
+    description: "Your brand is your business. We manage your social media channels, design campaigns, and keep your online presence consistent and active — so you stay visible to the people that matter.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    alt: "Laptop showing marketing analytics dashboard",
   },
   {
     title: "Paperwork & Admin",
-    description: "Never get buried in paperwork again. From contracts to compliance documents, we handle the administrative load so nothing falls through the cracks.",
-    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
-    alt: "Person analyzing social media performance on smartphone",
+    description: "The admin never stops — but it doesn't have to be your problem. We handle documentation, data entry, filing, and follow-ups so nothing slips through the cracks.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    alt: "Organized desk with paperwork and documents",
   },
   {
     title: "Calendar & Appointment Management",
-    description: "Stay on top of every viewing, meeting, and deadline. We coordinate your schedule, send reminders, and ensure your calendar runs like clockwork.",
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80",
-    alt: "Two professionals shaking hands over a real estate agreement",
+    description: "A missed appointment is a missed opportunity. We manage your schedule end-to-end — coordinating meetings, sending reminders, and making sure your day runs smoothly.",
+    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80",
+    alt: "Calendar planning and schedule management",
   },
   {
     title: "Content Creation",
-    description: "Stand out with professional content. From property listings to social media posts and marketing collateral — we create content that gets you noticed.",
-    image: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1200&q=80",
-    alt: "Laptop with digital dashboard and content planning notes",
+    description: "Great content builds trust. From social media posts to marketing collateral and presentation decks — we produce polished, on-brand content that gets you noticed.",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    alt: "Creative workspace for content creation",
   },
 ];
 
 const differentiators = [
-  { title: "Dedicated 1-to-1 Support", description: "Each client gets their own dedicated PA focused on your goals." },
-  { title: "Managed & Trained Team", description: "Our PAs are professionally trained and managed. You get a reliable, quality-controlled support system — not a freelancer you have to manage yourself." },
-  { title: "More Than Just a PA", description: "Your PA is backed by an entire support team — in-house designers, customer success managers, and internal resources — all working behind the scenes to deliver the best possible support." },
+  { title: "Dedicated 1-to-1 Support", description: "Every client gets a dedicated PA who learns your workflow, your preferences, and your business. No sharing, no rotation — just consistent support from someone who knows how you work." },
+  { title: "Managed & Trained Team", description: "Our PAs are professionally recruited, trained, and managed. You get reliable, quality-controlled support — without the hassle of hiring, training, or managing someone yourself." },
+  { title: "More Than Just a PA", description: "Your PA is backed by an entire support ecosystem — in-house designers, customer success managers, and shared resources. When your PA needs help, they have a team behind them to deliver." },
 ];
 
 const testimonials = [
@@ -71,7 +71,7 @@ export default function Home() {
         >
           <div className="relative z-10 flex flex-col justify-center">
             <h1 className="max-w-2xl font-serif text-5xl leading-tight font-semibold text-charcoal md:text-7xl">Focus on closing. We&apos;ll handle the rest.</h1>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-charcoal/85 md:text-xl">Dedicated personal assistants for Singapore&apos;s real estate professionals. Admin, marketing, lead generation — we handle it all so you can focus on closing deals.</p>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-charcoal/85 md:text-xl">Dedicated personal assistants for Singapore&apos;s busiest professionals. Admin, marketing, scheduling, content — we handle it all so you can focus on what you do best.</p>
             <motion.div whileHover={{ scale: 1.02, y: -1 }} whileTap={{ scale: 0.98 }} className="mt-10">
               <Link href="/contact" className="inline-flex rounded-xl bg-gold px-8 py-3 text-base font-semibold text-charcoal shadow-sm transition hover:shadow-lg hover:bg-berry hover:text-cream">Get in Touch</Link>
             </motion.div>
@@ -90,7 +90,7 @@ export default function Home() {
             <motion.div initial={{ opacity: 1, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.4 }} className="mt-12 grid gap-6 md:grid-cols-2">
               {services.map((service, idx) => (
                 <motion.article key={service.title} initial={{ opacity: 1, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, delay: idx * 0.1 }} whileHover={{ y: -4, scale: 1.01 }} className="overflow-hidden rounded-2xl border border-charcoal/10 bg-white shadow-soft transition hover:shadow-xl">
-                  <div className="relative h-40 w-full"><Image src={service.image} alt={service.alt} fill className="object-cover" /></div>
+                  <div className="relative aspect-video w-full"><Image src={service.image} alt={service.alt} fill className="object-cover" /></div>
                   <div className="p-7"><h3 className="text-xl font-semibold text-charcoal">{service.title}</h3><p className="mt-3 leading-relaxed text-plum/90">{service.description}</p></div>
                 </motion.article>
               ))}
