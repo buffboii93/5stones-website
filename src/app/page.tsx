@@ -42,10 +42,10 @@ const differentiators = [
 ];
 
 const testimonials = [
-  { quote: "Since partnering with 5STONES Group, I can finally stay focused on growth. My PA handles admin, scheduling, social media coordination, and follow-ups without dropping the ball.", name: "R.T.", title: "Business Owner", agency: "Professional Services" },
-  { quote: "I was skeptical about outsourcing support at first, but 5STONES changed my mind. My PA feels like part of the team and keeps operations running smoothly every day.", name: "D.L.", title: "Marketing Lead", agency: "E-commerce" },
-  { quote: "Managing a fast-moving team is intense. 5STONES gives our key people dedicated VAs, and the quality and consistency have been excellent.", name: "S.N.", title: "Operations Manager", agency: "Education" },
-  { quote: "What sets 5STONES apart is the managed model. You don't just get one assistant — you get a trained PA backed by a support team that helps deliver reliably.", name: "M.W.", title: "General Manager", agency: "Consulting" },
+  { quote: "Since partnering with 5STONES Group, I can finally stay focused on growth. My PA handles admin, scheduling, social media coordination, and follow-ups without dropping the ball.", name: "J.J.", title: "Business Owner", agency: "Professional Services" },
+  { quote: "I was skeptical about outsourcing support at first, but 5STONES changed my mind. My PA feels like part of the team and keeps operations running smoothly every day.", name: "J.R.", title: "Business Development Lead", agency: "Shipping Industry" },
+  { quote: "Managing a fast-moving team is intense. 5STONES gives our key people dedicated VAs, and the quality and consistency have been excellent.", name: "T.T.", title: "Senior Associate Division Director", agency: "PropNex" },
+  { quote: "What sets 5STONES apart is the managed model. You don't just get one assistant — you get a trained PA backed by a support team that helps deliver reliably.", name: "M.L.", title: "Senior Associate Director", agency: "ERA" },
 ];
 
 function InitialsAvatar({ name }: { name: string }) {
